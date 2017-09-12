@@ -1,7 +1,8 @@
-table, th, td{
-    border: 1px solid black;
+th {
+    background-color:#041c40;
+    color:white;
 }
 
-th, td {
-    padding: 2px;
+tr:nth-child(even) {
+    background-color:#ffbc77;
 }
