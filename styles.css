@@ -1,4 +1,11 @@
-table, th, td {
-    border: 1px solid black;
-    padding: 2px;
+body {
+    font-family: Arial, sans-serif;
+}
+
+#wizards{
+    color: blue;
+}
+
+.order {
+    background-color: green;
 }
