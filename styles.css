@@ -1,8 +1,4 @@
-th {
-    background-color:#041c40;
-    color:white;
-}
-
-tr:nth-child(even) {
-    background-color:#ffbc77;
+table, th, td {
+    border: 1px solid black;
+    padding: 2px;
 }
