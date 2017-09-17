@@ -1,58 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>JavaScript</title>
         <meta charset="utf-8">
-        <title>Page Title</title>
-        <link href="../lab02task4/styles.css" rel="stylesheet">
     </head>
     <body>
-        <form name="subscription" action="#" method="get">
-            <table id="wizards">
-                <tr>
-                    <td>Drink Type:</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="drinktype" value="Americano">Americano<br>
-                        <input type="radio" name="drinktype" value="Cuppuccino">Cuppuccino<br>
-                        <input type="radio" name="drinktype" value="Latte">Latte<br>
-                        <input type="radio" name="drinktype" value="Macchiato">Macchiato<br>
-                        <input type="radio" name="drinktype" value="Mocha">Mocha<br>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Size:</td>
-                </tr>
-                <tr>
-                    <td>
-                        <form name="selectexample" action="#" method="get">
-                        <select name="size">
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
-                        </select>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Flavors and Extras:</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" name="flavorsandextras" value="Extra Espresso Shot">Extra Espresso Shot<br>
-                        <input type="checkbox" name="flavorsandextras" value="Caramel Shot">Caramel Shot<br>
-                        <input type="checkbox" name="flavorsandextras" value="Hazelnut Shot">Hazelnut Shot<br>
-                        <input type="checkbox" name="flavorsandextras" value="Vanilla Shot">Vanilla Shot<br>
-                    </td>
-                    
-                </tr>
-                <tr>
-                    <td>Order For (name):
-                        <input type="text" name="name">
-                    </td>
-                </tr>
-            </table>
-            <p><input type="submit" value="Order" class="order"></p>
-        </form>
+        <p id="hi"></p>
+        <script>
+            // Alerts are below.
+            //alert("Hello, world!");
+            //alert("Hello again!");
+            //document.write("Hello,world!");
+            //console.log("Hello, world!");
+            //document.getElementById("hi").innerHTML = "Hello, world!";
+            var first_name;
+            first_name = "Matt";
+            //alert("Hello, " + first_name + "!");
+            //document.getElementById("hi").innerHTML = "Hello, " + first_name + "!";
+            var current_year;
+            current_year = 2017;
+            //document.getElementById("hi").innerHTML = "Learning JavaScript in " + current_year + " is a great idea!";
+            var having_fun;
+            having_fun = true;
+            //document.write("Are we having fun writing JavaScript?" + having_fun);
+            var today;
+            today = new Date();
+            document.write("Today's date is: " + today);
+        </script>
+        
     </body>
 </html>
