@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="result">
+            
+        </p>
+        <script name="doMath">
+            function math() {
+            var x;
+            var y;
+            var z;
+            var answer;
+            
+            x = 5;
+            y = 3;
+            z = 4;
+            
+            answer = x * y - z;
+            document.getElementById("result").innerHTML = "The result of the equation is " + answer + " !";
+        }
+        </script>
+        <form name="calculator" action="#" method="get">
+            <p><input type="button" id="doMath" name="doMath" value="Do Math!" onclick="math();"></p>
+    </body>
+</html>
