@@ -1,44 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title> </title>
+        <title>Quiz 4</title>
         <meta charset="utf-8">
     </head>
     <body>
         <script>
-            function check() {
-                var first = document.example.exampleText.value;
-                var second = document.example.moreText.value;
-                var third = document.colors.color.value;
-                var fourth = document.animals.animal.value;
-                document.getElementById("words").innerHTML = "Hello, my name is " + first + "! " + "I have " + second + " wonderful " + third + " " +fourth + "!";
+            function showAlert() {
+                var favAnimal;
+
+                favAnimal = document.getElementById("favoriteAnimal").value;
+                alert("Your favorite animal is a " + favAnimal + "!");
             }
         </script>
-        <form name="example" id="example" action="#" method="get">
-            <p>Name: <input type="text" name="exampleText" id="exampleText"></p>
-            <p>Number: <input type="text" name="moreText" id="moreText"></p>
+        <form name="showAnimal" id="showAnimal" action="#" method="get"></form>
+            <p>What is your favorite animal? <input type="text" name="favoriteAnimal id="favoriteAnimal"></p>
+            <p><input type="button" name="go" id="go" value="Go!" onclick="showAlert();"></p>
         </form>
-        <p>
-            <form name="colors" id="colors" action="#" method="get">
-            Color:<br>
-                <input type="radio" name="color" value="black">Black<br>
-                <input type="radio" name="color" value="brown">Brown<br>
-                <input type="radio" name="color" value="orange">Orange<br>
-            </form>
-        </p>
-        <p>
-            <form name="animals" id="animals" action="#" method="get">
-            Animal &#40;plural&#41;:
-            <select name="animal">
-                <option value="gorillas">gorillas</option>
-                <option value="lions">lions</option>
-                <option value="seals">seals</option>
-                <option value="blue whales">blue whales</option>
-            </select>
-            <p><input type="button" name="go" id="go" value="Tell story!" onclick="check();"></p>
-        </form>
-        </p>
-        <hr>
-        <p id="words"></p>
     </body>
 </html>
