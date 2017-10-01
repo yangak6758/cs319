@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms by Name</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function showValues() {
+                var firstName;
+                var lastName;
+                var age;
+                var animal;
+                var color;
+
+                firstName = document.getElementById("fn").value;
+                //alert(firstName);
+                lastName = document.getElementById("ln").value;
+                //alert(lastName);
+                age = document.getElementById("yearsOld").value;
+                //alert(age);
+                animal = document.getElementById("pet").value;
+                //alert(animal);
+                color = document.biography.color.value;
+                //alert(color);
+
+                alert("Hi, my name is " + firstName + " " + lastName + ". I am " + age + " years old. My favorite animal is a " + animal + ". And my favorite color is " + color + ".");
+            }
+        </script>
+        <form name="biography" id="bio" action="#" method="get">
+            <p>First name: <input type="text" name="firstName" id="fn"></p>
+            <p>Last Name: <input type="text" name="lastName" id="ln"></p>
+            <p>Age: <input type="number" name="age" id="yearsOld"></p>
+            <p>Favorite animal:
+                <select name="animal" id="pet">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select>
+            </p>
+            <p>Favorite color:<br>
+                <input type="radio" name="color" value="red" id="colorRed">Red<br>
+                <input type="radio" name="color" value="yellow" id="colorYellow">Yellow<br>
+                <input type="radio" name="color" value="blue" id="colorBlue">Blue
+            </p>
+                <input type="button" name="go" id="go" value="Go!" onclick="showValues();">
+        </form>
+    </body>
+</html>
