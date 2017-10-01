@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>If/Else Control Structure</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function test() {
+                var input = document.getElementById("testInput").value;
+                input = input.trim();
+                input = parseInt(input);
+                //if (input != "") {
+                //    alert(input);
+                //} else {
+                //    alert("Please fill in your name.");
+                //    document.testForm.testInput.focus();
+                //}
+                if (input >= 90) {
+                    alert("You got an A.");
+                } else if (input < 90 && input >= 80) {
+                    alert("You got a B.");
+                } else if (input < 80 && input >= 70) {
+                    alert("You got a C.");
+                } else if (input < 70 && input >= 60) {
+                    alert("You got a D.");
+                } else {
+                    alert("Please redo the assignment.");
+                }
+            }
+        </script>
+        <form id="testForm" name="testForm" action="#" method="get">
+            <p><input type="text" id="testInput" name="testInput"></p>
+            <p><input type="button" id="go" name="go" value="Go!" onclick="test();"></p>
+        </form>
+    </body>
+</html>

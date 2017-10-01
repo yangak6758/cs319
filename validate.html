@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Form Validation</title>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function validate() {
+                //return true;
+                //return false;
+                var last_name;
+                var first_name;
+                last_name = document.getElementById("lastName").value;
+                first_name = document.getElementById("firstName").value;
+                last_name = last_name.trim();
+                first_name = first_name.trim();
+                if (last_name == "") {
+                    alert("Please fill in the last name.");
+                    document.testForm.lastName.focus();
+                    document.testForm.lastName.style.backgroundColor = "#ffc6c6";
+                    document.testForm.firstName.style.backgroundColor = "#ffffff";
+                    return false;
+                } else if (first_name == "") {
+                    alert("Please fill in the first name.");
+                    document.testForm.firstName.focus();
+                    document.testForm.firstName.style.backgroundColor = "#ffc6c6";
+                    document.testForm.lastName.style.backgroundColor = "#ffffff";
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+        <form id="testForm" name="testForm" action="#" method="get" onsubmit="return validate();">
+            <p>First Name: <input type="text" id="firstName" name="firstName"></p>
+            <p>Last Name: <input type="text" id="lastName" name="lastName"></p>
+            <p><input type="submit" id="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>
