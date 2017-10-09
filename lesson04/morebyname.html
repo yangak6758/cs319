@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms by Name</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function showValues() {
+                var firstName;
+                var lastName;
+                var age;
+                var animal;
+                var color;
+
+                firstName = document.biography.firstName.value;
+                //alert(firstName);
+                lastName = document.biography.lastName.value;
+                //alert(lastName);
+                age = document.biography.age.value;
+                //alert(age);
+                animal = document.biography.animal.value;
+                //alert(animal);
+                color = document.biography.color.value;
+                //alert(color);
+                //document.formName.inputName.value;
+
+                alert("Hi, my name is " + firstName + " " + lastName + ". I am " + age + " years old. My favorite animal is " + animal + ". And my favorite color is " + color + ".");
+            }
+        </script>
+        <form name="biography" action="#" method="get">
+            <p>First name: <input type="text" name="firstName"></p>
+            <p>Last Name: <input type="text" name="lastName"></p>
+            <p>Age: <input type="number" name="age"></p>
+            <p>Favorite animal:
+                <select name="animal">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select>
+            </p>
+            <p>Favorite color:<br>
+                <input type="radio" name="color" value="red">Red<br>
+                <input type="radio" name="color" value="yellow">Yellow<br>
+                <input type="radio" name="color" value="blue">Blue
+            </p>
+                <input type="button" name="go" value="Go!" onclick="showValues();">
+        </form>
+    </body>
+</html>

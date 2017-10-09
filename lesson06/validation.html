@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Form Validation</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function validate() {
+                //alert("test");
+                var id_num = document.getElementById("idNum");
+                var email = document.getElementById("emailAddr");
+
+                id_num = id_num.trim();
+                //id_num = parseInt(id_num);
+                email = email.trim();
+
+                if (id_num.value == "") {
+                    alert("Please enter your ID number.");
+                    id_num.focus();
+                    return false;
+                } else if (isNaN(id_num.value) == true) {
+                    alert("Your ID number is invalid.");
+                    id_num.select();
+                    return false;
+                } else if (id_num.value < 100 || id_num.value > 999) {
+                    alert("Your ID number is invalid.")
+                    id_num.select();
+                    return false;
+                } else if (email.value == "") {
+                    alert("Please enter your email.");
+                    email.focus();
+                    return false;
+                } else if (email.value.indexOf("@") <= 0) {
+                    alert("Your email is not valid.");
+                    email.select();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+        <form name="unite" id="unite" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return validate();">
+            <p>ID: <input type="text" name="idNum" id="idNum"></p>
+            <p>Email: <input type="text" name="emailAddr" id="emailAddr"></p>
+            <p><input type="submit" name="submit" id="submit" value="Sumbit"></p>
+        </form>
+    </body>
+</html>

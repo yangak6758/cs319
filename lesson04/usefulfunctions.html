@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>More Useful Functions</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function cleanUp() {
+                //var words;
+                //words = document.getElementById("someText").value;
+                //words = words.trim();
+                //words = words.toUpperCase();
+                //words = words.toLowerCase();
+                //document.write("Someone submitted " + words + " into our form.");
+
+                var numbers;
+                numbers = document.examples.someNumbers.value;
+                //numbers = parseInt(numbers);
+                //numbers = parseFloat(numbers);
+                numbers = Math.round(numbers);
+                document.write(numbers);
+            }
+        </script>
+        <form name="examples" id="examples" action="#" method="get">
+            <p>Text: <input type="text" name="someText" id="someText"></p>
+            <p>Numbers: <input type="text" name="someNumbers" id="someNumbers"></p>
+            <input type="button" name="go" id="go" value="Go!" onclick="cleanUp();">
+        </form>
+    </body>
+</html>
