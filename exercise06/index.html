@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guess the Number</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function validate() {
+                var guess;
+                var numbertoguess;
+                
+                guess = document.getElementById("gNumber");
+                numbertoguess = 9;
+                
+                if (guess.value == "") {
+                    alert("Your input is blank.");
+                    guess.focus();
+                    return false;
+                } else if (isNaN(guess.value) == true) {
+                    alert("Your input is not a number.");
+                    guess.select();
+                    return false;
+                } else if (guess.value < 1 || guess.value > 10) {
+                    alert("Your number is invalid.");
+                    guess.select();
+                    return false;
+                } else if (guess.value > numbertoguess) {
+                    alert("Guess a lower number.");
+                    guess.select();
+                    return false;
+                } else if (guess.value < numbertoguess) {
+                    alert("Guess a higher number.");
+                    guess.select();
+                    return false;
+                } else {
+                    alert("You're correct!");
+                    return true;
+                }
+            }
+        </script>
+        <form name="game" id="game" action="#" method="get" onsubmit="return validate();">
+            <p>Number: <input type="number" name="gNumber" id="gNumber"></p>
+            <p><input type="submit" name="submit" id="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>
