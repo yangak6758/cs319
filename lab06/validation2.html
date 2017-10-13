@@ -22,17 +22,18 @@
                     alert("Please fill in your last name.");
                     return false;
                 } else if (add == "") {
-                    alert("Please fill in your email address.")
+                    alert("Please fill in your email address.");
                     return false;
                 } else if (add.endsWith("@uwec.edu") == false) {
                     alert("Please use your uwec username.");
                     return false;
                 } else if (years == "") {
                     alert("Please enter your age.");
-                    years.focus();
+                    document.getElementById("age").focus();
                     return false;
                 } else if (isNaN(years) == true) {
                     alert("Please enter number of years.");
+                    document.getElementById("age").focus();
                     return false;
                 } else {
                     return true;
@@ -41,7 +42,7 @@
         </script>
     </head>
     <body>
-        <form name="survey" id="survey" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return Validate();">
+        <form name="survey" id="survey" action="https://www.mattsias.com/echo.php" method="get" onsubmit="return Validate();">
             <p>First Name:<input type="text" name="firstname" id="firstname"></p>
             <p>Last Name:<input type="text" name="lastname" id="lastname"></p>
             <p>Email Address:<input type="text" name="email" id="email"></p>
