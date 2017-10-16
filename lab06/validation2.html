@@ -22,14 +22,14 @@
                     alert("Please fill in your last name.");
                     return false;
                 } else if (add == "") {
-                    alert("Please fill in your email address.")
+                    alert("Please fill in your email address.");
                     return false;
                 } else if (add.endsWith("@uwec.edu") == false) {
                     alert("Please use your uwec username.");
                     return false;
                 } else if (years == "") {
                     alert("Please enter your age.");
-                    years.focus();
+                    document.getElementById("age").focus();
                     return false;
                 } else if (isNaN(years) == true) {
                     alert("Please enter number of years.");
